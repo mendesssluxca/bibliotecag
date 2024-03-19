@@ -18,13 +18,13 @@ class UsuarioView(View):
 class GeneroView(View):
     def get(self,request):
         genero = Genero.objects.all()
-        return render(request,'genero.html',{'Genero': genero})
+        return render(request,'genero.html',{'genero': genero})
     def post(self,request):
         pass
 class EditoraView(View):
     def get(self,request):
         editora = Editora.objects.all()
-        return render(request,'editora.html',{'Editora': editora})
+        return render(request,'editora.html',{'editora': editora})
     def post(self,request):
         pass
 class AutorView(View):
@@ -35,8 +35,8 @@ class AutorView(View):
         pass
 class LivroView(View):
     def get(self,request):
-        livro = Livro.objects.all()
-        return render(request,'livro.html',{'livro': livro})
+        livros = Livro.objects.all()
+        return render(request,'livro.html',{'livros': livros})
     def post(self,request):
         pass
 class EmprestimoView(View):

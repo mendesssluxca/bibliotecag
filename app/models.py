@@ -27,7 +27,7 @@ class Usuario(models.Model):
         verbose_name_plural ="Usuarios"
     
     def __str__(self):
-        return f'{self.nome, self.cpf, self.email}'
+        return f'{self.nome}'
 
 class Genero(models.Model):
     nome = models.CharField(max_length =100)
@@ -47,7 +47,7 @@ class Editora(models.Model):
         verbose_name_plural ="Editoras"
     
     def __str__(self):
-        return f'{self.nome, self.site, self.cidade}'
+        return f'{self.nome}'
     
 class Autor(models.Model):
     nome = models.CharField(max_length =100)
@@ -57,7 +57,7 @@ class Autor(models.Model):
         verbose_name_plural ="Autores"
     
     def __str__(self):
-        return f'{self.nome, self.cidade}'
+        return f'{self.nome}'
     
 class Livro(models.Model):
     nome = models.CharField(max_length =100)
@@ -71,7 +71,7 @@ class Livro(models.Model):
         verbose_name_plural ="Livros"
     
     def __str__(self):
-        return f'{self.nome, self.preco, self.datapublicacao, self.editora, self.genero, self.autor}'
+        return f'{self.nome}'
 
 class Emprestimo(models.Model):
     dataemprestimo = models.DateField()
